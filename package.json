@@ -1,0 +1,22 @@
+{
+  "name": "getting-started-with-js-testing",
+  "version": "1.0.0",
+  "description": "This project uses for learning testing with Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvdai2401/getting-started-with-js-testing.git"
+  },
+  "author": "nvdai2401",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvdai2401/getting-started-with-js-testing/issues"
+  },
+  "homepage": "https://github.com/nvdai2401/getting-started-with-js-testing#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
