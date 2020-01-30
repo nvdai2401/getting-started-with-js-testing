@@ -1,23 +1,22 @@
 const fetch = require("node-fetch")
 
-const obj = {}
+export const mockPromise = (trigo) => new Promise((resolve, reject) => {
+  if (trigo) {
+    resolve('Promise is fullfilled')
+  }
+  reject('Promise is rejected')
+})
 
-function sum(a, b) {
+export function sum(a, b) {
   return a + b
 }
 
-function fetchData(callback) {
-  fetch('https://5e324d5ab92d240014ea5171.mockapi.io/michael/v1/user')
-  .then(res => res.json())
+export function fetchData(callback) {
+  mockPromise(true)
   .then(data => {
     callback(data)
   })
-  .catch(err => {
-    callback(err)
+  .catch(error => {
+    callback(error)
   })
-}
-
-module.exports = {
-  sum,
-  fetchData
 }
