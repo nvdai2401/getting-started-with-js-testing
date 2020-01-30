@@ -18,5 +18,8 @@
   "homepage": "https://github.com/nvdai2401/getting-started-with-js-testing#readme",
   "devDependencies": {
     "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
   }
 }
