@@ -2,9 +2,11 @@ const fetch = require("node-fetch")
 
 export const mockPromise = (trigo) => new Promise((resolve, reject) => {
   if (trigo) {
-    resolve('Promise is fullfilled')
+    setTimeout(() => {
+      resolve('Promise is fullfilled')
+    }, 1000)
   }
-  reject('Promise is rejected')
+  // reject('Promise is rejected')
 })
 
 export function sum(a, b) {

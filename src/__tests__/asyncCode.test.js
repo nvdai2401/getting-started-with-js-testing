@@ -5,6 +5,7 @@
 import { fetchData, mockPromise } from '../index'
 
 test('the data is an user array with 10 users', done => {
+  expect.assertions(1)
   function callback(data) {
     try {
       expect(data).toBe('Promise is fullfilled')
@@ -17,29 +18,16 @@ test('the data is an user array with 10 users', done => {
 })
 
 test('the data is Promise is fullfilled', async () => {
-  // return mockPromise(true).then(data => {
-  //   expect(data).toBe('Promise is fullfilled')
-  // })
-  try {
-    const data = await mockPromise(false)
+  expect.assertions(1)
+  return mockPromise(true).then(data => {
     expect(data).toBe('Promise is fullfilled')
-  } catch (error) {
-    expect(error).toMatch('Promise is rejected')
-  }
+  })
+  
+  // try {
+  //   const data = await mockPromise(true)
+  //   expect(data).toBe('Promise is fullfilled')
+  // } catch (error) {
+  //   expect(error).toMatch('Promise is rejected')
+  // }
 })
 
-beforeEach(() => {
-  console.log('beforeEach')
-});
-
-afterEach(() => {
-  console.log('afterEach')
-});
-
-beforeAll(() => {
-  console.log('beforeAll')
-});
-
-afterAll(() => {
-  console.log('afterAll')
-});
